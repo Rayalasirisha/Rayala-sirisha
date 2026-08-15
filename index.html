@@ -16,270 +16,481 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fb;
-            color: #1f2937;
-            line-height: 1.6;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.7;
         }
 
-        /* Navigation */
+        /* ================= NAVIGATION ================= */
+
         nav {
-            background: #111827;
-            padding: 18px;
-            text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1e293b;
+            padding: 18px 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
         }
 
         nav a {
-            color: white;
+            color: #cbd5e1;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 16px;
             font-size: 15px;
             font-weight: 600;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #60a5fa;
         }
 
-        /* Hero Section */
+        /* ================= HERO ================= */
+
         .hero {
-            background: #111827;
-            color: white;
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #172554 0%,
+                    #0b1120 55%
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
         }
 
         .hero h1 {
-            font-size: 48px;
+            font-size: 58px;
             margin-bottom: 15px;
+            color: #f8fafc;
         }
 
         .hero h2 {
-            font-size: 24px;
+            font-size: 25px;
             font-weight: normal;
-            color: #93c5fd;
-            margin-bottom: 15px;
+            color: #60a5fa;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 17px;
-            color: #d1d5db;
+            color: #94a3b8;
+            font-size: 18px;
         }
 
-        .buttons {
-            margin-top: 30px;
+        .hero-buttons {
+            margin-top: 35px;
         }
 
         .button {
             display: inline-block;
-            padding: 12px 22px;
-            margin: 5px;
-            border-radius: 6px;
+            padding: 12px 24px;
+            margin: 6px;
+            border-radius: 7px;
             text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .primary-button {
             background: #2563eb;
             color: white;
-            font-weight: bold;
         }
 
-        .button:hover {
-            background: #1d4ed8;
+        .primary-button:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
         }
 
-        /* Sections */
+        .secondary-button {
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            background: #111827;
+        }
+
+        .secondary-button:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+
+        /* ================= GENERAL SECTIONS ================= */
+
         section {
-            max-width: 1050px;
+            max-width: 1100px;
             margin: auto;
-            padding: 70px 25px;
+            padding: 90px 25px;
         }
 
-        section h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #111827;
+        .section-title {
             text-align: center;
+            margin-bottom: 50px;
         }
 
-        /* About */
-        .about-text {
-            max-width: 850px;
+        .section-title h2 {
+            font-size: 34px;
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-box {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            padding: 35px;
+            max-width: 900px;
             margin: auto;
-            text-align: center;
-            font-size: 18px;
         }
 
-        /* Skills */
+        .about-box p {
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        /* ================= SKILLS ================= */
+
         .skills {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
+            gap: 14px;
         }
 
         .skill {
-            background: white;
+            background: #111827;
+            border: 1px solid #263449;
+            color: #bfdbfe;
             padding: 12px 20px;
-            border-radius: 25px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #3b82f6;
+            transform: translateY(-3px);
+        }
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            padding: 32px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .experience-card h3 {
+            color: #f8fafc;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .experience-card .company {
+            color: #60a5fa;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .experience-card p {
+            color: #cbd5e1;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #2563eb;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .project-card h3 {
+            color: #f8fafc;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 12px;
+        }
+
+        .technologies {
+            color: #60a5fa !important;
+            font-size: 14px;
             font-weight: 600;
         }
 
-        /* Cards */
-        .card {
-            background: white;
-            padding: 28px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        .result {
+            color: #93c5fd !important;
+            font-weight: 600;
         }
 
-        .card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #111827;
-        }
-
-        .card p {
-            margin-bottom: 10px;
-        }
-
-        .tech {
-            font-weight: bold;
-        }
-
-        /* Project Buttons */
         .project-button {
             display: inline-block;
-            margin-top: 12px;
-            padding: 10px 18px;
+            margin-top: 15px;
+            padding: 9px 17px;
+            border-radius: 6px;
             background: #2563eb;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
         .project-button:hover {
-            background: #1d4ed8;
+            background: #3b82f6;
         }
 
-        /* Contact */
-        .contact {
+        /* ================= EDUCATION ================= */
+
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .education-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .education-card h3 {
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #94a3b8;
+        }
+
+        .current {
+            color: #60a5fa !important;
+            font-weight: 600;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-box {
             text-align: center;
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            padding: 45px 25px;
         }
 
-        .contact a {
-            color: #2563eb;
+        .contact-box p {
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: #60a5fa;
             text-decoration: none;
         }
 
-        /* Footer */
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
+        .contact-box a:hover {
+            text-decoration: underline;
         }
 
-        /* Mobile */
-        @media (max-width: 700px) {
+        /* ================= FOOTER ================= */
+
+        footer {
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+            background: #080d19;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 42px;
             }
 
             .hero h2 {
-                font-size: 20px;
+                font-size: 21px;
+            }
+
+            .projects-grid,
+            .education-container {
+                grid-template-columns: 1fr;
             }
 
             nav a {
                 display: inline-block;
-                margin: 6px;
+                margin: 6px 8px;
             }
         }
+
+        @media (max-width: 500px) {
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 65px 18px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-<!-- Navigation -->
+
+<!-- ================= NAVIGATION ================= -->
 
 <nav>
+
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
+
 </nav>
 
 
-<!-- Hero Section -->
+<!-- ================= HERO ================= -->
 
 <header class="hero">
 
-    <h1>Sirisha Rayala</h1>
+    <div class="hero-content">
 
-    <h2>Data Analytics | Data Science | Machine Learning</h2>
+        <h1>Sirisha Rayala</h1>
 
-    <p>MSc Student | Bengaluru, India</p>
+        <h2>Data Analytics | Data Science | Machine Learning</h2>
 
-    <div class="buttons">
+        <p>
+            MSc Student | Bengaluru, India
+        </p>
 
-        <a
-            class="button"
-            href="https://github.com/Rayalasirisha"
-            target="_blank">
-            GitHub
-        </a>
+        <div class="hero-buttons">
 
-        <a
-            class="button"
-            href="https://www.linkedin.com/in/rayala-sirisha/"
-            target="_blank">
-            LinkedIn
-        </a>
+            <a
+                class="button primary-button"
+                href="mailto:rayalasirisha93@gmail.com">
+                Contact Me
+            </a>
 
-        <a
-            class="button"
-            href="mailto:rayalasirisha93@gmail.com">
-            Email Me
-        </a>
+            <a
+                class="button secondary-button"
+                href="https://github.com/Rayalasirisha"
+                target="_blank">
+                GitHub
+            </a>
+
+            <a
+                class="button secondary-button"
+                href="https://www.linkedin.com/in/rayala-sirisha/"
+                target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
 
     </div>
 
 </header>
 
 
-<!-- About -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
-    <h2>About Me</h2>
+    <div class="section-title">
 
-    <p class="about-text">
+        <h2>About Me</h2>
 
-        I am currently pursuing my MSc and building my career in
-        Data Analytics, Data Science, and Machine Learning.
+        <p>Turning data into meaningful insights</p>
 
-        I completed my BSc in 2025 and have developed practical
-        experience through projects and internship experience.
+    </div>
 
-        I am interested in analyzing data, identifying patterns,
-        creating meaningful insights, and solving real-world
-        problems using data-driven approaches.
+    <div class="about-box">
 
-    </p>
+        <p>
+
+            I am currently pursuing my MSc and building my career
+            in Data Analytics, Data Science, and Machine Learning.
+
+            I completed my BSc in 2025 and have developed practical
+            experience through academic projects and internship
+            experience.
+
+            I am interested in analyzing data, identifying patterns,
+            creating meaningful insights, and applying machine
+            learning techniques to solve real-world problems.
+
+        </p>
+
+    </div>
 
 </section>
 
 
-<!-- Skills -->
+<!-- ================= SKILLS ================= -->
 
 <section id="skills">
 
-    <h2>Technical Skills</h2>
+    <div class="section-title">
+
+        <h2>Technical Skills</h2>
+
+        <p>Technologies and concepts I work with</p>
+
+    </div>
 
     <div class="skills">
 
@@ -300,15 +511,25 @@
 </section>
 
 
-<!-- Experience -->
+<!-- ================= EXPERIENCE ================= -->
 
 <section id="experience">
 
-    <h2>Experience</h2>
+    <div class="section-title">
 
-    <div class="card">
+        <h2>Experience</h2>
 
-        <h3>Data Science Intern — ExcelR</h3>
+        <p>Internship experience</p>
+
+    </div>
+
+    <div class="experience-card">
+
+        <h3>Data Science Intern</h3>
+
+        <div class="company">
+            ExcelR
+        </div>
 
         <p>
 
@@ -318,206 +539,242 @@
 
         </p>
 
-        <p class="tech">
-
-            Focus Areas:
-            Python | Data Analysis | Machine Learning
-
-        </p>
-
     </div>
 
 </section>
 
 
-<!-- Projects -->
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects">
 
-    <h2>Projects</h2>
+    <div class="section-title">
 
+        <h2>Featured Projects</h2>
 
-    <!-- Customer Churn Prediction -->
-
-    <div class="card">
-
-        <h3>Customer Churn Prediction</h3>
-
-        <p>
-
-            Developed a machine learning project to analyze
-            customer behavior and predict customers who are
-            likely to churn.
-
-        </p>
-
-        <p>
-
-            The project involved data preprocessing,
-            exploratory data analysis, feature preparation,
-            model building, and model evaluation.
-
-        </p>
-
-        <p class="tech">
-
-            Technologies:
-            Python | Pandas | NumPy | Scikit-learn |
-            Machine Learning
-
-        </p>
+        <p>Practical projects demonstrating my technical skills</p>
 
     </div>
 
 
-    <!-- AI Book Recommendation -->
-
-    <div class="card">
-
-        <h3>AI Book Recommendation System</h3>
-
-        <p>
-
-            Developed an AI-based book recommendation system
-            that recommends books based on similarities between
-            books and user preferences.
-
-        </p>
-
-        <p class="tech">
-
-            Technologies:
-            Python | Pandas | NumPy | NLP |
-            Machine Learning
-
-        </p>
-
-        <a
-            class="project-button"
-            href="https://github.com/Rayalasirisha/AI-Book-Recommendation-System"
-            target="_blank">
-
-            View Project
-
-        </a>
-
-    </div>
+    <div class="projects-grid">
 
 
-    <!-- Alzheimer's Disease -->
+        <!-- Customer Churn -->
 
-    <div class="card">
+        <div class="project-card">
 
-        <h3>Alzheimer's Disease EDA & Classification</h3>
+            <h3>Customer Churn Prediction</h3>
 
-        <p>
+            <p>
 
-            Performed exploratory data analysis and developed
-            a machine learning classification model to analyze
-            Alzheimer's disease-related data.
+                Developed a machine learning project to analyze
+                customer behavior and predict customers who are
+                likely to churn.
 
-        </p>
+            </p>
 
-        <p>
+            <p>
 
-            Built a Random Forest classification model and
-            evaluated its performance using appropriate
-            classification metrics.
+                The project involved data preprocessing,
+                exploratory data analysis, feature preparation,
+                model building, and model evaluation.
 
-        </p>
+            </p>
 
-        <p class="tech">
+            <p class="technologies">
 
-            Technologies:
-            Python | Pandas | NumPy |
-            Scikit-learn | Machine Learning
+                Python · Pandas · NumPy · Scikit-learn ·
+                Machine Learning
 
-        </p>
+            </p>
 
-        <p>
-            <strong>Model Accuracy:</strong> 92%
-        </p>
+        </div>
 
-        <a
-            class="project-button"
-            href="https://github.com/sirisha9393/Alzheimer-s-Disease-EDA-Classification"
-            target="_blank">
 
-            View Project
+        <!-- Book Recommendation -->
 
-        </a>
+        <div class="project-card">
+
+            <h3>AI Book Recommendation System</h3>
+
+            <p>
+
+                Developed an AI-based recommendation system that
+                recommends books based on similarities between
+                books and user preferences.
+
+            </p>
+
+            <p class="technologies">
+
+                Python · Pandas · NumPy · NLP ·
+                Machine Learning
+
+            </p>
+
+            <a
+                class="project-button"
+                href="https://github.com/Rayalasirisha/AI-Book-Recommendation-System"
+                target="_blank">
+
+                View on GitHub →
+
+            </a>
+
+        </div>
+
+
+        <!-- Alzheimer's -->
+
+        <div class="project-card">
+
+            <h3>Alzheimer's Disease EDA & Classification</h3>
+
+            <p>
+
+                Performed exploratory data analysis and developed
+                a machine learning classification model to analyze
+                Alzheimer's disease-related data.
+
+            </p>
+
+            <p class="technologies">
+
+                Python · Pandas · NumPy · Scikit-learn ·
+                Random Forest
+
+            </p>
+
+            <p class="result">
+
+                Model Accuracy: 92%
+
+            </p>
+
+            <a
+                class="project-button"
+                href="https://github.com/sirisha9393/Alzheimer-s-Disease-EDA-Classification"
+                target="_blank">
+
+                View on GitHub →
+
+            </a>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- Education -->
+<!-- ================= EDUCATION ================= -->
 
 <section id="education">
 
-    <h2>Education</h2>
+    <div class="section-title">
 
-    <div class="card">
+        <h2>Education</h2>
 
-        <h3>MSc</h3>
-
-        <p>Currently Pursuing</p>
+        <p>Academic background</p>
 
     </div>
 
-    <div class="card">
 
-        <h3>BSc</h3>
+    <div class="education-container">
 
-        <p>Completed in 2025</p>
+
+        <div class="education-card">
+
+            <h3>MSc</h3>
+
+            <p class="current">
+                Currently Pursuing
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>BSc</h3>
+
+            <p>
+                Completed in 2025
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- Contact -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
-    <h2>Contact</h2>
+    <div class="section-title">
 
-    <div class="card contact">
+        <h2>Let's Connect</h2>
+
+        <p>Open to opportunities and professional connections</p>
+
+    </div>
+
+
+    <div class="contact-box">
 
         <p>
 
-            I am open to entry-level opportunities and
+            I am interested in entry-level opportunities and
             internships in Data Analytics, Data Science,
             and Machine Learning.
 
         </p>
 
-        <br>
-
         <p>
+
             <strong>Email:</strong>
+
             <a href="mailto:rayalasirisha93@gmail.com">
+
                 rayalasirisha93@gmail.com
+
             </a>
+
         </p>
 
+
         <p>
+
             <strong>GitHub:</strong>
+
             <a
                 href="https://github.com/Rayalasirisha"
                 target="_blank">
+
                 github.com/Rayalasirisha
+
             </a>
+
         </p>
 
+
         <p>
+
             <strong>LinkedIn:</strong>
+
             <a
                 href="https://www.linkedin.com/in/rayala-sirisha/"
                 target="_blank">
+
                 LinkedIn Profile
+
             </a>
+
         </p>
 
     </div>
@@ -525,15 +782,16 @@
 </section>
 
 
-<!-- Footer -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
     <p>
-        © 2026 Sirisha Rayala | Data Analytics & Data Science
+        © 2026 Sirisha Rayala · Data Analytics & Data Science
     </p>
 
 </footer>
+
 
 </body>
 </html>
