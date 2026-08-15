@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sirisha Rayala | Data Analyst | Data Science</title>
+    <title>Sirisha Rayala | Data Science & Data Analytics</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -37,7 +39,7 @@
         nav a {
             color: #cbd5e1;
             text-decoration: none;
-            margin: 0 16px;
+            margin: 0 15px;
             font-size: 15px;
             font-weight: 600;
             transition: 0.3s;
@@ -66,7 +68,18 @@
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
+        }
+
+        .profile-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: #111827;
+            border: 1px solid #263449;
+            color: #93c5fd;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
@@ -76,16 +89,24 @@
         }
 
         .hero h2 {
-            font-size: 25px;
+            font-size: 24px;
             font-weight: normal;
             color: #60a5fa;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .hero p {
             color: #94a3b8;
             font-size: 18px;
         }
+
+        .location {
+            margin-top: 10px;
+            color: #64748b !important;
+            font-size: 16px !important;
+        }
+
+        /* ================= BUTTONS ================= */
 
         .hero-buttons {
             margin-top: 35px;
@@ -123,7 +144,7 @@
             transform: translateY(-2px);
         }
 
-        /* ================= GENERAL SECTIONS ================= */
+        /* ================= SECTIONS ================= */
 
         section {
             max-width: 1100px;
@@ -160,6 +181,11 @@
         .about-box p {
             color: #cbd5e1;
             font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .about-box p:last-child {
+            margin-bottom: 0;
         }
 
         /* ================= SKILLS ================= */
@@ -184,6 +210,31 @@
         .skill:hover {
             border-color: #3b82f6;
             transform: translateY(-3px);
+        }
+
+        /* ================= COURSEWORK ================= */
+
+        .coursework-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .course {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 18px 22px;
+            color: #cbd5e1;
+        }
+
+        .course::before {
+            content: "▹";
+            color: #60a5fa;
+            margin-right: 10px;
+            font-weight: bold;
         }
 
         /* ================= EXPERIENCE ================= */
@@ -291,15 +342,35 @@
 
         .education-card h3 {
             color: #f8fafc;
-            margin-bottom: 8px;
+            font-size: 22px;
+            margin-bottom: 12px;
         }
 
         .education-card p {
             color: #94a3b8;
+            margin-bottom: 5px;
         }
 
         .current {
             color: #60a5fa !important;
+            font-weight: 600;
+        }
+
+        /* ================= LANGUAGES ================= */
+
+        .languages {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .language {
+            background: #111827;
+            border: 1px solid #1e293b;
+            padding: 15px 30px;
+            border-radius: 10px;
+            color: #cbd5e1;
             font-weight: 600;
         }
 
@@ -350,7 +421,8 @@
             }
 
             .projects-grid,
-            .education-container {
+            .education-container,
+            .coursework-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -384,7 +456,9 @@
         }
 
     </style>
+
 </head>
+
 
 <body>
 
@@ -395,9 +469,11 @@
 
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#coursework">Coursework</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#education">Education</a>
+    <a href="#languages">Languages</a>
     <a href="#contact">Contact</a>
 
 </nav>
@@ -409,12 +485,22 @@
 
     <div class="hero-content">
 
+        <span class="profile-badge">
+            Data Science & Analytics
+        </span>
+
         <h1>Sirisha Rayala</h1>
 
-        <h2>Data Analytics | Data Science | Machine Learning</h2>
+        <h2>
+            Data Analytics | Data Science | Machine Learning
+        </h2>
 
         <p>
-            MSc Student | Bengaluru, India
+            MSc in Data Science | BSc Data Science Graduate
+        </p>
+
+        <p class="location">
+            Bengaluru & Hyderabad, India
         </p>
 
         <div class="hero-buttons">
@@ -462,16 +548,26 @@
 
         <p>
 
-            I am currently pursuing my MSc and building my career
+            I am currently pursuing an MSc in Data Science at
+            Jain University, Bengaluru, and building my career
             in Data Analytics, Data Science, and Machine Learning.
 
-            I completed my BSc in 2025 and have developed practical
-            experience through academic projects and internship
-            experience.
+        </p>
 
-            I am interested in analyzing data, identifying patterns,
-            creating meaningful insights, and applying machine
-            learning techniques to solve real-world problems.
+        <p>
+
+            I completed my BSc in Data Science in 2025 from
+            Aadhya Degree College for Women, affiliated with
+            Osmania University.
+
+        </p>
+
+        <p>
+
+            I have practical experience through data science
+            projects and internship experience, with an interest
+            in data analysis, machine learning, data visualization,
+            and solving real-world problems using data.
 
         </p>
 
@@ -499,12 +595,66 @@
         <span class="skill">R</span>
         <span class="skill">Tableau</span>
         <span class="skill">Excel</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">NumPy</span>
+        <span class="skill">Scikit-learn</span>
         <span class="skill">Data Science</span>
+        <span class="skill">Data Analysis</span>
         <span class="skill">Machine Learning</span>
         <span class="skill">Deep Learning</span>
         <span class="skill">Generative AI</span>
-        <span class="skill">Data Analysis</span>
         <span class="skill">Data Visualization</span>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COURSEWORK ================= -->
+
+<section id="coursework">
+
+    <div class="section-title">
+
+        <h2>Relevant Coursework</h2>
+
+        <p>Core areas of study</p>
+
+    </div>
+
+    <div class="coursework-grid">
+
+        <div class="course">
+            Python for Data Science
+        </div>
+
+        <div class="course">
+            Statistics & Probability
+        </div>
+
+        <div class="course">
+            Data Analysis
+        </div>
+
+        <div class="course">
+            Exploratory Data Analysis
+        </div>
+
+        <div class="course">
+            Machine Learning
+        </div>
+
+        <div class="course">
+            Deep Learning
+        </div>
+
+        <div class="course">
+            SQL & Databases
+        </div>
+
+        <div class="course">
+            Data Visualization
+        </div>
 
     </div>
 
@@ -535,6 +685,7 @@
 
             Completed a Data Science internship with practical
             exposure to data analysis, Python, machine learning,
+            data preprocessing, exploratory data analysis,
             and data science concepts.
 
         </p>
@@ -552,19 +703,22 @@
 
         <h2>Featured Projects</h2>
 
-        <p>Practical projects demonstrating my technical skills</p>
+        <p>
+            Practical projects demonstrating my technical skills
+        </p>
 
     </div>
-
 
     <div class="projects-grid">
 
 
-        <!-- Customer Churn -->
+        <!-- CUSTOMER CHURN -->
 
         <div class="project-card">
 
-            <h3>Customer Churn Prediction</h3>
+            <h3>
+                Customer Churn Prediction
+            </h3>
 
             <p>
 
@@ -576,7 +730,7 @@
 
             <p>
 
-                The project involved data preprocessing,
+                The project includes data preprocessing,
                 exploratory data analysis, feature preparation,
                 model building, and model evaluation.
 
@@ -589,20 +743,31 @@
 
             </p>
 
+            <a
+                class="project-button"
+                href="https://github.com/Rayalasirisha/Customers-churn-prediction"
+                target="_blank">
+
+                View on GitHub →
+
+            </a>
+
         </div>
 
 
-        <!-- Book Recommendation -->
+        <!-- AI BOOK -->
 
         <div class="project-card">
 
-            <h3>AI Book Recommendation System</h3>
+            <h3>
+                AI Book Recommendation System
+            </h3>
 
             <p>
 
-                Developed an AI-based recommendation system that
-                recommends books based on similarities between
-                books and user preferences.
+                Developed an AI-based recommendation system
+                designed to recommend books based on similarities
+                between books and user preferences.
 
             </p>
 
@@ -625,11 +790,13 @@
         </div>
 
 
-        <!-- Alzheimer's -->
+        <!-- ALZHEIMER'S -->
 
         <div class="project-card">
 
-            <h3>Alzheimer's Disease EDA & Classification</h3>
+            <h3>
+                Alzheimer's Disease EDA & Classification
+            </h3>
 
             <p>
 
@@ -664,6 +831,40 @@
         </div>
 
 
+        <!-- ONLINE COURSE -->
+
+        <div class="project-card">
+
+            <h3>
+                Online Course Recommendation System
+            </h3>
+
+            <p>
+
+                Developed a recommendation system designed to
+                suggest relevant online courses based on user
+                interests and course characteristics.
+
+            </p>
+
+            <p class="technologies">
+
+                Python · Pandas · NumPy ·
+                Machine Learning · Recommendation System
+
+            </p>
+
+            <a
+                class="project-button"
+                href="https://github.com/Rayalasirisha/Online-Course-Recomendation-system"
+                target="_blank">
+
+                View on GitHub →
+
+            </a>
+
+        </div>
+
     </div>
 
 </section>
@@ -681,13 +882,20 @@
 
     </div>
 
-
     <div class="education-container">
 
 
+        <!-- MSc -->
+
         <div class="education-card">
 
-            <h3>MSc</h3>
+            <h3>
+                MSc in Data Science
+            </h3>
+
+            <p>
+                Jain University, Bengaluru
+            </p>
 
             <p class="current">
                 Currently Pursuing
@@ -696,9 +904,21 @@
         </div>
 
 
+        <!-- BSc -->
+
         <div class="education-card">
 
-            <h3>BSc</h3>
+            <h3>
+                BSc in Data Science
+            </h3>
+
+            <p>
+                Aadhya Degree College for Women
+            </p>
+
+            <p>
+                Affiliated with Osmania University
+            </p>
 
             <p>
                 Completed in 2025
@@ -706,6 +926,28 @@
 
         </div>
 
+    </div>
+
+</section>
+
+
+<!-- ================= LANGUAGES ================= -->
+
+<section id="languages">
+
+    <div class="section-title">
+
+        <h2>Languages</h2>
+
+        <p>Languages I communicate in</p>
+
+    </div>
+
+    <div class="languages">
+
+        <div class="language">
+            English
+        </div>
 
     </div>
 
@@ -720,10 +962,11 @@
 
         <h2>Let's Connect</h2>
 
-        <p>Open to opportunities and professional connections</p>
+        <p>
+            Open to opportunities and professional connections
+        </p>
 
     </div>
-
 
     <div class="contact-box">
 
@@ -747,7 +990,6 @@
 
         </p>
 
-
         <p>
 
             <strong>GitHub:</strong>
@@ -762,7 +1004,6 @@
 
         </p>
 
-
         <p>
 
             <strong>LinkedIn:</strong>
@@ -771,9 +1012,17 @@
                 href="https://www.linkedin.com/in/rayala-sirisha/"
                 target="_blank">
 
-                LinkedIn Profile
+                linkedin.com/in/rayala-sirisha
 
             </a>
+
+        </p>
+
+        <p>
+
+            <strong>Location:</strong>
+
+            Bengaluru & Hyderabad, India
 
         </p>
 
@@ -794,4 +1043,5 @@
 
 
 </body>
+
 </html>
